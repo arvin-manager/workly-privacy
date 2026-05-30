@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Workly</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 24px;
+    }
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #111;
+    }
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #666;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 36px 0 10px;
+      color: #111;
+    }
+    p { margin-bottom: 12px; color: #333; }
+    ul {
+      margin: 8px 0 12px 20px;
+      color: #333;
+    }
+    ul li { margin-bottom: 6px; }
+    a { color: #0071e3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .badge {
+      display: inline-block;
+      background: #0071e3;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e5e5;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Privacy Policy</h1>
+      <p>Workly &nbsp;·&nbsp; Last updated: May 2026</p>
+    </header>
+
+    <p>
+      Workly ("we", "our", or "the app") is a work-hours tracking application.
+      This Privacy Policy explains what information we collect, how we use it,
+      and your rights regarding your data. By using Workly, you agree to the
+      practices described below.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+    <p>We collect only what is necessary to provide the app's features:</p>
+    <ul>
+      <li>
+        <strong>Work records</strong> — shift dates, hours worked, overtime,
+        day type (regular / weekend / holiday), notes, and optional photos
+        you attach to a record.
+      </li>
+      <li>
+        <strong>Salary configuration</strong> — base salary, hourly rate, and
+        overtime multipliers you enter in the app. These are stored locally on
+        your device.
+      </li>
+      <li>
+        <strong>Account information</strong> — if you sign in with Google or
+        Apple, we receive your name and email address from those providers
+        solely to identify your cloud backup.
+      </li>
+      <li>
+        <strong>Device locale</strong> — your device's region setting is read
+        once at startup to look up local public holidays automatically. It is
+        not stored or transmitted independently.
+      </li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To display your work records and calculate salary summaries.</li>
+      <li>
+        To sync your data across devices via Firebase cloud backup
+        (only when you are signed in and initiate a backup).
+      </li>
+      <li>
+        To fetch public holiday data for your region from third-party APIs
+        (Nager.Date and Calendarific) so the app can highlight holidays on
+        the calendar.
+      </li>
+    </ul>
+    <p>We do <strong>not</strong> sell, rent, or share your personal data with
+    advertisers or any third party for marketing purposes.</p>
+
+    <h2>3. Data Storage</h2>
+    <ul>
+      <li>
+        <strong>Local storage</strong> — all work records and settings are
+        stored in a local SQLite database on your device. This data stays on
+        your device unless you choose to back it up.
+      </li>
+      <li>
+        <strong>Cloud backup</strong> — when you sign in and use the backup
+        feature, your records are encrypted in transit and stored in
+        Google Firebase Firestore under your account. You can delete this
+        backup at any time from the app.
+      </li>
+      <li>
+        <strong>Photos</strong> — photos attached to records are stored
+        locally on your device and, if backup is enabled, uploaded to
+        Firebase Storage under your account.
+      </li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>Workly integrates with the following third-party services. Each has its
+    own privacy policy:</p>
+    <ul>
+      <li>
+        <span class="badge">Google</span>
+        <a href="https://firebase.google.com/support/privacy" target="_blank">
+          Firebase (Auth, Firestore, Storage)
+        </a>
+      </li>
+      <li>
+        <span class="badge">Google</span>
+        <a href="https://policies.google.com/privacy" target="_blank">
+          Google Sign-In
+        </a>
+      </li>
+      <li>
+        <span class="badge">Apple</span>
+        <a href="https://www.apple.com/legal/privacy/" target="_blank">
+          Sign in with Apple
+        </a>
+      </li>
+      <li>
+        <span class="badge">API</span>
+        <a href="https://date.nager.at" target="_blank">
+          Nager.Date — public holiday data (no account required)
+        </a>
+      </li>
+      <li>
+        <span class="badge">API</span>
+        <a href="https://calendarific.com/privacy-policy" target="_blank">
+          Calendarific — public holiday data (no account required)
+        </a>
+      </li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+    <p>
+      Local data remains on your device until you uninstall the app or delete
+      a record manually. Cloud backup data is retained until you delete it
+      from the app or delete your account. We do not retain any data on our
+      own servers.
+    </p>
+
+    <h2>6. Your Rights</h2>
+    <ul>
+      <li><strong>Access</strong> — all your data is visible directly in the app.</li>
+      <li>
+        <strong>Delete local data</strong> — uninstall the app or delete
+        individual records from within the app.
+      </li>
+      <li>
+        <strong>Delete cloud data</strong> — use the "Delete Backup" option in
+        the app, or contact us and we will delete it for you.
+      </li>
+      <li>
+        <strong>Sign out</strong> — signing out stops any further cloud sync.
+        Local data is not affected.
+      </li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+      Workly is not directed at children under 13. We do not knowingly collect
+      personal information from children.
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. The "Last updated"
+      date at the top of this page will reflect any changes. Continued use of
+      the app after changes are posted constitutes acceptance of the updated
+      policy.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      If you have any questions or requests regarding this Privacy Policy,
+      please contact us at:
+      <a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a>
+    </p>
+
+    <footer>
+      &copy; 2026 Workly. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
