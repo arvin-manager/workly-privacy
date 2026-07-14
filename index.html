@@ -3,231 +3,432 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Workly</title>
+  <title>Privacy Policy - Workly</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", "Microsoft JhengHei", sans-serif;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #1a1a1a;
-      background: #f9f9f9;
+      background: #f7f8fb;
     }
     .container {
-      max-width: 740px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 48px 24px 80px;
+      padding: 40px 22px 72px;
     }
     header {
-      margin-bottom: 40px;
-      border-bottom: 1px solid #e5e5e5;
-      padding-bottom: 24px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid #e3e7ee;
+      padding-bottom: 22px;
     }
     header h1 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #111;
+      font-size: 30px;
+      font-weight: 750;
+      letter-spacing: -0.02em;
+      color: #111827;
     }
     header p {
       margin-top: 6px;
       font-size: 14px;
-      color: #666;
+      color: #6b7280;
     }
+    .language-switcher {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+    .language-switcher button {
+      appearance: none;
+      border: 1px solid #d6dce6;
+      background: #fff;
+      color: #374151;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .language-switcher button.active {
+      border-color: #0071e3;
+      background: #0071e3;
+      color: #fff;
+    }
+    article {
+      background: #fff;
+      border: 1px solid #e7ebf2;
+      border-radius: 14px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(16, 24, 40, 0.05);
+    }
+    article[hidden] { display: none; }
     h2 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 36px 0 10px;
-      color: #111;
+      font-size: 19px;
+      font-weight: 700;
+      margin: 34px 0 10px;
+      color: #111827;
     }
-    p { margin-bottom: 12px; color: #333; }
-    ul {
-      margin: 8px 0 12px 20px;
-      color: #333;
-    }
-    ul li { margin-bottom: 6px; }
+    p { margin-bottom: 12px; color: #333b49; }
+    ul { margin: 8px 0 12px 22px; color: #333b49; }
+    li { margin-bottom: 7px; }
     a { color: #0071e3; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .badge {
       display: inline-block;
-      background: #0071e3;
-      color: #fff;
+      background: #eef5ff;
+      color: #0057b8;
       font-size: 12px;
-      font-weight: 600;
+      font-weight: 700;
       padding: 2px 8px;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-right: 6px;
       vertical-align: middle;
     }
     footer {
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid #e5e5e5;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid #e3e7ee;
       font-size: 13px;
-      color: #888;
+      color: #7b8494;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 28px 14px 56px; }
+      article { padding: 22px 18px; border-radius: 12px; }
+      header h1 { font-size: 26px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>Privacy Policy</h1>
-      <p>Workly &nbsp;·&nbsp; Last updated: May 2026</p>
+      <h1 id="page-title">Privacy Policy</h1>
+      <p id="page-meta">Workly · Last updated: July 2026</p>
+      <nav class="language-switcher" aria-label="Language selector">
+        <button type="button" data-lang-button="en">English</button>
+        <button type="button" data-lang-button="zh-Hant">繁體中文</button>
+        <button type="button" data-lang-button="ja">日本語</button>
+        <button type="button" data-lang-button="ko">한국어</button>
+      </nav>
     </header>
 
-    <p>
-      Workly ("we", "our", or "the app") is a work-hours tracking application.
-      This Privacy Policy explains what information we collect, how we use it,
-      and your rights regarding your data. By using Workly, you agree to the
-      practices described below.
-    </p>
+    <article data-lang="en">
+      <p>
+        Workly ("we", "our", or "the app") is a work-hours tracking application.
+        This Privacy Policy explains what information we collect, how we use it,
+        and your rights regarding your data. By using Workly, you agree to the
+        practices described below.
+      </p>
 
-    <h2>1. Information We Collect</h2>
-    <p>We collect only what is necessary to provide the app's features:</p>
-    <ul>
-      <li>
-        <strong>Work records</strong> — shift dates, hours worked, overtime,
-        day type (regular / weekend / holiday), notes, and optional photos
-        you attach to a record.
-      </li>
-      <li>
-        <strong>Salary configuration</strong> — base salary, hourly rate, and
-        overtime multipliers you enter in the app. These are stored locally on
-        your device.
-      </li>
-      <li>
-        <strong>Account information</strong> — if you sign in with Google or
-        Apple, we receive your name and email address from those providers
-        solely to identify your cloud backup.
-      </li>
-      <li>
-        <strong>Device locale</strong> — your device's region setting is read
-        once at startup to look up local public holidays automatically. It is
-        not stored or transmitted independently.
-      </li>
-    </ul>
+      <h2>1. Information We Collect</h2>
+      <p>We collect only what is necessary to provide the app's features:</p>
+      <ul>
+        <li><strong>Work records</strong> - shift dates, hours worked, overtime, day type, notes, and optional photos you attach to a record.</li>
+        <li><strong>Salary configuration</strong> - base salary, hourly rate, overtime rules, allowances, and deductions you enter in the app.</li>
+        <li><strong>Account information</strong> - if you sign in with Google or Apple, we receive your name and email address solely to identify your cloud backup.</li>
+        <li><strong>Device locale</strong> - your device region may be used to look up local public holidays. It is not stored or transmitted independently.</li>
+      </ul>
 
-    <h2>2. How We Use Your Information</h2>
-    <ul>
-      <li>To display your work records and calculate salary summaries.</li>
-      <li>
-        To sync your data across devices via Firebase cloud backup
-        (only when you are signed in and initiate a backup).
-      </li>
-      <li>
-        To fetch public holiday data for your region from third-party APIs
-        (Nager.Date and Calendarific) so the app can highlight holidays on
-        the calendar.
-      </li>
-    </ul>
-    <p>We do <strong>not</strong> sell, rent, or share your personal data with
-    advertisers or any third party for marketing purposes.</p>
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To display your work records and calculate work-hour and salary summaries.</li>
+        <li>To sync your data across devices via Firebase cloud backup when you are signed in and choose to use backup or restore features.</li>
+        <li>To fetch public holiday data for your region from third-party APIs so the app can highlight holidays on the calendar.</li>
+      </ul>
+      <p>We do <strong>not</strong> sell, rent, or share your personal data with advertisers or any third party for marketing purposes.</p>
 
-    <h2>3. Data Storage</h2>
-    <ul>
-      <li>
-        <strong>Local storage</strong> — all work records and settings are
-        stored in a local SQLite database on your device. This data stays on
-        your device unless you choose to back it up.
-      </li>
-      <li>
-        <strong>Cloud backup</strong> — when you sign in and use the backup
-        feature, your records are encrypted in transit and stored in
-        Google Firebase Firestore under your account. You can delete this
-        backup at any time from the app.
-      </li>
-      <li>
-        <strong>Photos</strong> — photos attached to records are stored
-        locally on your device and, if backup is enabled, uploaded to
-        Firebase Storage under your account.
-      </li>
-    </ul>
+      <h2>3. Data Storage</h2>
+      <ul>
+        <li><strong>Local storage</strong> - work records and settings are stored in a local SQLite database on your device unless you choose to back them up.</li>
+        <li><strong>Cloud backup</strong> - when you sign in and use backup features, your records are encrypted in transit and stored in Google Firebase under your account.</li>
+        <li><strong>Photos</strong> - photos attached to records are stored locally and, if backup is enabled, uploaded to Firebase Storage under your account.</li>
+      </ul>
 
-    <h2>4. Third-Party Services</h2>
-    <p>Workly integrates with the following third-party services. Each has its
-    own privacy policy:</p>
-    <ul>
-      <li>
-        <span class="badge">Google</span>
-        <a href="https://firebase.google.com/support/privacy" target="_blank">
-          Firebase (Auth, Firestore, Storage)
-        </a>
-      </li>
-      <li>
-        <span class="badge">Google</span>
-        <a href="https://policies.google.com/privacy" target="_blank">
-          Google Sign-In
-        </a>
-      </li>
-      <li>
-        <span class="badge">Apple</span>
-        <a href="https://www.apple.com/legal/privacy/" target="_blank">
-          Sign in with Apple
-        </a>
-      </li>
-      <li>
-        <span class="badge">API</span>
-        <a href="https://date.nager.at" target="_blank">
-          Nager.Date — public holiday data (no account required)
-        </a>
-      </li>
-      <li>
-        <span class="badge">API</span>
-        <a href="https://calendarific.com/privacy-policy" target="_blank">
-          Calendarific — public holiday data (no account required)
-        </a>
-      </li>
-    </ul>
+      <h2>4. Third-Party Services</h2>
+      <p>Workly integrates with the following third-party services. Each has its own privacy policy:</p>
+      <ul>
+        <li><span class="badge">Google</span><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase (Auth, Firestore, Storage)</a></li>
+        <li><span class="badge">Google</span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Sign-In</a></li>
+        <li><span class="badge">Apple</span><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Sign in with Apple</a></li>
+        <li><span class="badge">API</span><a href="https://date.nager.at" target="_blank" rel="noopener">Nager.Date - public holiday data</a></li>
+        <li><span class="badge">API</span><a href="https://calendarific.com/privacy-policy" target="_blank" rel="noopener">Calendarific - public holiday data</a></li>
+      </ul>
 
-    <h2>5. Data Retention</h2>
-    <p>
-      Local data remains on your device until you uninstall the app or delete
-      a record manually. Cloud backup data is retained until you delete it
-      from the app or delete your account. We do not retain any data on our
-      own servers.
-    </p>
+      <h2>5. Data Retention</h2>
+      <p>Local data remains on your device until you uninstall the app or delete it manually. Cloud backup data is retained until you delete it from the app or request deletion. We do not retain your work records on our own servers.</p>
 
-    <h2>6. Your Rights</h2>
-    <ul>
-      <li><strong>Access</strong> — all your data is visible directly in the app.</li>
-      <li>
-        <strong>Delete local data</strong> — uninstall the app or delete
-        individual records from within the app.
-      </li>
-      <li>
-        <strong>Delete cloud data</strong> — use the "Delete Backup" option in
-        the app, or contact us and we will delete it for you.
-      </li>
-      <li>
-        <strong>Sign out</strong> — signing out stops any further cloud sync.
-        Local data is not affected.
-      </li>
-    </ul>
+      <h2>6. Your Rights</h2>
+      <ul>
+        <li><strong>Access</strong> - your data is visible directly in the app.</li>
+        <li><strong>Delete local data</strong> - uninstall the app or delete individual records from within the app.</li>
+        <li><strong>Delete cloud data</strong> - use the delete backup option in the app, or contact us and we will help delete it.</li>
+        <li><strong>Sign out</strong> - signing out stops further cloud sync. Local data is not affected.</li>
+      </ul>
 
-    <h2>7. Children's Privacy</h2>
-    <p>
-      Workly is not directed at children under 13. We do not knowingly collect
-      personal information from children.
-    </p>
+      <h2>7. Children's Privacy</h2>
+      <p>Workly is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. The "Last updated"
-      date at the top of this page will reflect any changes. Continued use of
-      the app after changes are posted constitutes acceptance of the updated
-      policy.
-    </p>
+      <h2>8. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page will reflect any changes.</p>
 
-    <h2>9. Contact</h2>
-    <p>
-      If you have any questions or requests regarding this Privacy Policy,
-      please contact us at:
-      <a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a>
-    </p>
+      <h2>9. Contact</h2>
+      <p>If you have any questions or requests regarding this Privacy Policy, please contact us at: <a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a></p>
 
-    <footer>
-      &copy; 2026 Workly. All rights reserved.
-    </footer>
+      <footer>&copy; 2026 Workly. All rights reserved.</footer>
+    </article>
+
+    <article data-lang="zh-Hant" hidden>
+      <p>
+        Workly（以下稱「我們」或「本 App」）是一款工時記錄與薪資統計工具。
+        本隱私權政策說明我們會收集哪些資訊、如何使用這些資訊，以及你對個人資料享有的權利。
+        使用 Workly 即表示你同意本政策所述內容。
+      </p>
+
+      <h2>1. 我們收集的資訊</h2>
+      <p>我們僅收集提供 App 功能所必要的資訊：</p>
+      <ul>
+        <li><strong>工時記錄</strong>：班次日期、工作時數、加班、日期類型、備註，以及你自願附加到記錄中的照片。</li>
+        <li><strong>薪資設定</strong>：你在 App 中輸入的底薪、時薪、加班規則、津貼與扣款項目。</li>
+        <li><strong>帳號資訊</strong>：若你使用 Google 或 Apple 登入，我們會從登入服務取得你的名稱與電子郵件地址，僅用於識別你的雲端備份資料。</li>
+        <li><strong>裝置地區設定</strong>：App 可能會使用你的裝置地區來查詢當地公眾假期。此資訊不會被獨立儲存或傳送。</li>
+      </ul>
+
+      <h2>2. 我們如何使用資訊</h2>
+      <ul>
+        <li>顯示你的工時記錄，並計算工時與薪資統計。</li>
+        <li>當你登入並選擇使用備份或恢復功能時，透過 Firebase 雲端備份在多裝置間同步資料。</li>
+        <li>從第三方 API 查詢你所在地區的公眾假期，讓 App 可以在日曆中標示假期。</li>
+      </ul>
+      <p>我們<strong>不會</strong>出售、出租，或為行銷目的將你的個人資料分享給廣告商或其他第三方。</p>
+
+      <h2>3. 資料儲存</h2>
+      <ul>
+        <li><strong>本機儲存</strong>：工時記錄與設定會儲存在你裝置上的 SQLite 資料庫中，除非你選擇進行雲端備份。</li>
+        <li><strong>雲端備份</strong>：當你登入並使用備份功能時，資料會在傳輸過程中加密，並儲存在你帳號下的 Google Firebase 中。</li>
+        <li><strong>照片</strong>：附加在記錄中的照片會儲存在你的裝置本機；若啟用備份，則會上傳至你帳號下的 Firebase Storage。</li>
+      </ul>
+
+      <h2>4. 第三方服務</h2>
+      <p>Workly 會整合以下第三方服務。各服務均有其自身的隱私權政策：</p>
+      <ul>
+        <li><span class="badge">Google</span><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase（Auth、Firestore、Storage）</a></li>
+        <li><span class="badge">Google</span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 登入</a></li>
+        <li><span class="badge">Apple</span><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">使用 Apple 登入</a></li>
+        <li><span class="badge">API</span><a href="https://date.nager.at" target="_blank" rel="noopener">Nager.Date - 公眾假期資料</a></li>
+        <li><span class="badge">API</span><a href="https://calendarific.com/privacy-policy" target="_blank" rel="noopener">Calendarific - 公眾假期資料</a></li>
+      </ul>
+
+      <h2>5. 資料保留</h2>
+      <p>本機資料會保留在你的裝置上，直到你解除安裝 App 或手動刪除。雲端備份資料會保留到你在 App 中刪除，或向我們提出刪除請求為止。我們不會在自己的伺服器上保存你的工時記錄。</p>
+
+      <h2>6. 你的權利</h2>
+      <ul>
+        <li><strong>查看資料</strong>：你的資料可直接在 App 內查看。</li>
+        <li><strong>刪除本機資料</strong>：你可以解除安裝 App，或在 App 中刪除個別記錄。</li>
+        <li><strong>刪除雲端資料</strong>：你可以使用 App 內的刪除備份功能，或聯絡我們協助刪除。</li>
+        <li><strong>登出帳號</strong>：登出後將停止後續雲端同步，本機資料不受影響。</li>
+      </ul>
+
+      <h2>7. 兒童隱私</h2>
+      <p>Workly 並非面向 13 歲以下兒童。我們不會在知情情況下收集兒童的個人資訊。</p>
+
+      <h2>8. 政策變更</h2>
+      <p>我們可能會不時更新本隱私權政策。頁面頂部的「最後更新」日期會反映最新變更。</p>
+
+      <h2>9. 聯絡我們</h2>
+      <p>若你對本隱私權政策有任何問題或請求，請透過以下電子郵件聯絡我們：<a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a></p>
+
+      <footer>&copy; 2026 Workly. 保留所有權利。</footer>
+    </article>
+
+    <article data-lang="ja" hidden>
+      <p>
+        Workly（以下「当社」または「本アプリ」）は、勤務時間の記録と給与集計を行うアプリです。
+        本プライバシーポリシーでは、当社が収集する情報、その利用目的、およびお客様の権利について説明します。
+        Workly を利用することで、本ポリシーに記載された内容に同意したものとみなされます。
+      </p>
+
+      <h2>1. 収集する情報</h2>
+      <p>当社は、本アプリの機能提供に必要な情報のみを収集します。</p>
+      <ul>
+        <li><strong>勤務記録</strong>：勤務日、勤務時間、残業、日付タイプ、メモ、およびお客様が任意で記録に添付した写真。</li>
+        <li><strong>給与設定</strong>：基本給、時給、残業ルール、手当、控除など、お客様がアプリ内で入力した情報。</li>
+        <li><strong>アカウント情報</strong>：Google または Apple でサインインした場合、クラウドバックアップを識別する目的で、氏名とメールアドレスを受け取ります。</li>
+        <li><strong>端末の地域設定</strong>：地域の祝日を取得するため、端末の地域設定を利用する場合があります。この情報は単独で保存または送信されません。</li>
+      </ul>
+
+      <h2>2. 情報の利用目的</h2>
+      <ul>
+        <li>勤務記録を表示し、勤務時間と給与の集計を行うため。</li>
+        <li>お客様がサインインし、バックアップまたは復元機能を利用した場合に、Firebase クラウドバックアップを通じてデータを同期するため。</li>
+        <li>カレンダー上で祝日を表示するため、第三者 API から地域の祝日データを取得するため。</li>
+      </ul>
+      <p>当社は、広告またはマーケティング目的で個人データを販売、貸与、または第三者に共有することはありません。</p>
+
+      <h2>3. データの保存</h2>
+      <ul>
+        <li><strong>ローカル保存</strong>：勤務記録と設定は、お客様がバックアップを選択しない限り、端末内の SQLite データベースに保存されます。</li>
+        <li><strong>クラウドバックアップ</strong>：サインインしてバックアップ機能を利用した場合、データは通信時に暗号化され、お客様のアカウントに紐づく Google Firebase に保存されます。</li>
+        <li><strong>写真</strong>：記録に添付された写真は端末内に保存され、バックアップが有効な場合は Firebase Storage にアップロードされます。</li>
+      </ul>
+
+      <h2>4. 第三者サービス</h2>
+      <p>Workly は以下の第三者サービスと連携します。各サービスにはそれぞれのプライバシーポリシーがあります。</p>
+      <ul>
+        <li><span class="badge">Google</span><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase（Auth、Firestore、Storage）</a></li>
+        <li><span class="badge">Google</span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google サインイン</a></li>
+        <li><span class="badge">Apple</span><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple でサインイン</a></li>
+        <li><span class="badge">API</span><a href="https://date.nager.at" target="_blank" rel="noopener">Nager.Date - 祝日データ</a></li>
+        <li><span class="badge">API</span><a href="https://calendarific.com/privacy-policy" target="_blank" rel="noopener">Calendarific - 祝日データ</a></li>
+      </ul>
+
+      <h2>5. データの保持</h2>
+      <p>ローカルデータは、お客様がアプリをアンインストールするか手動で削除するまで端末内に保持されます。クラウドバックアップデータは、アプリ内で削除するか、削除を依頼するまで保持されます。当社独自のサーバーに勤務記録を保存することはありません。</p>
+
+      <h2>6. お客様の権利</h2>
+      <ul>
+        <li><strong>確認</strong>：お客様のデータはアプリ内で直接確認できます。</li>
+        <li><strong>ローカルデータの削除</strong>：アプリをアンインストールするか、アプリ内で個別の記録を削除できます。</li>
+        <li><strong>クラウドデータの削除</strong>：アプリ内のバックアップ削除機能を利用するか、当社に連絡して削除を依頼できます。</li>
+        <li><strong>サインアウト</strong>：サインアウトすると以後のクラウド同期は停止します。ローカルデータには影響しません。</li>
+      </ul>
+
+      <h2>7. 児童のプライバシー</h2>
+      <p>Workly は 13 歳未満の児童を対象としていません。当社は、児童から個人情報を故意に収集することはありません。</p>
+
+      <h2>8. 本ポリシーの変更</h2>
+      <p>当社は、本プライバシーポリシーを随時更新する場合があります。ページ上部の「最終更新日」は変更内容に応じて更新されます。</p>
+
+      <h2>9. お問い合わせ</h2>
+      <p>本プライバシーポリシーに関するご質問やご依頼は、以下のメールアドレスまでお問い合わせください：<a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a></p>
+
+      <footer>&copy; 2026 Workly. All rights reserved.</footer>
+    </article>
+
+    <article data-lang="ko" hidden>
+      <p>
+        Workly(이하 "당사" 또는 "앱")는 근무시간 기록 및 급여 계산을 위한 애플리케이션입니다.
+        본 개인정보 처리방침은 당사가 어떤 정보를 수집하고, 어떻게 사용하며, 사용자가 자신의 데이터에 대해 어떤 권리를 가지는지 설명합니다.
+        Workly를 사용하면 아래 내용에 동의하는 것으로 간주됩니다.
+      </p>
+
+      <h2>1. 수집하는 정보</h2>
+      <p>당사는 앱 기능 제공에 필요한 정보만 수집합니다.</p>
+      <ul>
+        <li><strong>근무 기록</strong>: 근무 날짜, 근무시간, 잔업, 날짜 유형, 메모, 사용자가 선택적으로 첨부한 사진.</li>
+        <li><strong>급여 설정</strong>: 기본급, 시급, 잔업 규칙, 수당, 공제 등 사용자가 앱에 입력한 정보.</li>
+        <li><strong>계정 정보</strong>: Google 또는 Apple로 로그인하는 경우, 클라우드 백업을 식별하기 위해 해당 서비스에서 이름과 이메일 주소를 받습니다.</li>
+        <li><strong>기기 지역 설정</strong>: 지역 공휴일을 조회하기 위해 기기의 지역 설정을 사용할 수 있습니다. 이 정보는 별도로 저장되거나 전송되지 않습니다.</li>
+      </ul>
+
+      <h2>2. 정보 사용 방법</h2>
+      <ul>
+        <li>근무 기록을 표시하고 근무시간 및 급여 통계를 계산하기 위해 사용합니다.</li>
+        <li>사용자가 로그인한 상태에서 백업 또는 복원 기능을 선택한 경우, Firebase 클라우드 백업을 통해 데이터를 동기화하기 위해 사용합니다.</li>
+        <li>캘린더에 공휴일을 표시하기 위해 제3자 API에서 지역 공휴일 데이터를 가져오기 위해 사용합니다.</li>
+      </ul>
+      <p>당사는 광고 또는 마케팅 목적으로 사용자의 개인정보를 판매, 임대하거나 제3자에게 공유하지 않습니다.</p>
+
+      <h2>3. 데이터 저장</h2>
+      <ul>
+        <li><strong>로컬 저장</strong>: 근무 기록과 설정은 사용자가 백업을 선택하지 않는 한 기기의 SQLite 데이터베이스에 저장됩니다.</li>
+        <li><strong>클라우드 백업</strong>: 로그인 후 백업 기능을 사용하는 경우, 데이터는 전송 중 암호화되며 사용자의 계정에 연결된 Google Firebase에 저장됩니다.</li>
+        <li><strong>사진</strong>: 기록에 첨부된 사진은 기기에 로컬로 저장되며, 백업이 활성화된 경우 Firebase Storage에 업로드됩니다.</li>
+      </ul>
+
+      <h2>4. 제3자 서비스</h2>
+      <p>Workly는 다음 제3자 서비스를 사용합니다. 각 서비스에는 자체 개인정보 처리방침이 있습니다.</p>
+      <ul>
+        <li><span class="badge">Google</span><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase(Auth, Firestore, Storage)</a></li>
+        <li><span class="badge">Google</span><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 로그인</a></li>
+        <li><span class="badge">Apple</span><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple로 로그인</a></li>
+        <li><span class="badge">API</span><a href="https://date.nager.at" target="_blank" rel="noopener">Nager.Date - 공휴일 데이터</a></li>
+        <li><span class="badge">API</span><a href="https://calendarific.com/privacy-policy" target="_blank" rel="noopener">Calendarific - 공휴일 데이터</a></li>
+      </ul>
+
+      <h2>5. 데이터 보관</h2>
+      <p>로컬 데이터는 사용자가 앱을 삭제하거나 직접 삭제할 때까지 기기에 보관됩니다. 클라우드 백업 데이터는 앱에서 삭제하거나 삭제를 요청할 때까지 보관됩니다. 당사는 자체 서버에 사용자의 근무 기록을 보관하지 않습니다.</p>
+
+      <h2>6. 사용자의 권리</h2>
+      <ul>
+        <li><strong>열람</strong>: 사용자의 데이터는 앱에서 직접 확인할 수 있습니다.</li>
+        <li><strong>로컬 데이터 삭제</strong>: 앱을 삭제하거나 앱 내에서 개별 기록을 삭제할 수 있습니다.</li>
+        <li><strong>클라우드 데이터 삭제</strong>: 앱의 백업 삭제 기능을 사용하거나 당사에 연락하여 삭제를 요청할 수 있습니다.</li>
+        <li><strong>로그아웃</strong>: 로그아웃하면 이후 클라우드 동기화가 중지됩니다. 로컬 데이터에는 영향을 주지 않습니다.</li>
+      </ul>
+
+      <h2>7. 아동의 개인정보</h2>
+      <p>Workly는 만 13세 미만 아동을 대상으로 하지 않습니다. 당사는 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+      <h2>8. 본 방침의 변경</h2>
+      <p>당사는 본 개인정보 처리방침을 수시로 업데이트할 수 있습니다. 페이지 상단의 "최종 업데이트" 날짜는 변경 사항을 반영합니다.</p>
+
+      <h2>9. 문의</h2>
+      <p>본 개인정보 처리방침에 대한 질문이나 요청이 있는 경우 다음 이메일로 문의해 주세요: <a href="mailto:anarvin212@gmail.com">anarvin212@gmail.com</a></p>
+
+      <footer>&copy; 2026 Workly. All rights reserved.</footer>
+    </article>
   </div>
+
+  <script>
+    const languages = {
+      en: {
+        title: "Privacy Policy",
+        meta: "Workly · Last updated: July 2026"
+      },
+      "zh-Hant": {
+        title: "隱私權政策",
+        meta: "Workly · 最後更新：2026 年 7 月"
+      },
+      ja: {
+        title: "プライバシーポリシー",
+        meta: "Workly · 最終更新日：2026年7月"
+      },
+      ko: {
+        title: "개인정보 처리방침",
+        meta: "Workly · 최종 업데이트: 2026년 7월"
+      }
+    };
+
+    function normalizeLanguage(value) {
+      const lang = (value || "").toLowerCase();
+      if (lang.startsWith("zh")) return "zh-Hant";
+      if (lang.startsWith("ja")) return "ja";
+      if (lang.startsWith("ko")) return "ko";
+      return "en";
+    }
+
+    function getInitialLanguage() {
+      const params = new URLSearchParams(window.location.search);
+      const queryLanguage = params.get("lang");
+      if (queryLanguage) return normalizeLanguage(queryLanguage);
+      const savedLanguage = localStorage.getItem("worklyPrivacyLanguage");
+      if (savedLanguage) return normalizeLanguage(savedLanguage);
+      return normalizeLanguage(navigator.language || (navigator.languages && navigator.languages[0]));
+    }
+
+    function setLanguage(language) {
+      const activeLanguage = languages[language] ? language : "en";
+      document.documentElement.lang = activeLanguage;
+      document.getElementById("page-title").textContent = languages[activeLanguage].title;
+      document.getElementById("page-meta").textContent = languages[activeLanguage].meta;
+      document.title = `${languages[activeLanguage].title} - Workly`;
+
+      document.querySelectorAll("[data-lang]").forEach((article) => {
+        article.hidden = article.dataset.lang !== activeLanguage;
+      });
+      document.querySelectorAll("[data-lang-button]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.langButton === activeLanguage);
+        button.setAttribute("aria-pressed", button.dataset.langButton === activeLanguage ? "true" : "false");
+      });
+      localStorage.setItem("worklyPrivacyLanguage", activeLanguage);
+    }
+
+    document.querySelectorAll("[data-lang-button]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.langButton));
+    });
+
+    setLanguage(getInitialLanguage());
+  </script>
 </body>
 </html>
